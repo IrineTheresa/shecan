@@ -17,7 +17,6 @@ The website is designed to spread awareness about women empowerment with a clean
 
 * HTML
 * CSS
-* JavaScript
 
 ## 📂 Sections Included
 
