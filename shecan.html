@@ -1,0 +1,286 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>She Can Foundation</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#f5f7fb;
+      color:#333;
+      transition:0.4s;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+      background:white;
+      box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    nav h1{
+      color:#6c63ff;
+      font-size:2rem;
+    }
+
+    .dark-btn{
+      border:none;
+      background:#6c63ff;
+      color:white;
+      padding:10px 15px;
+      border-radius:25px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .dark-btn:hover{
+      transform:scale(1.05);
+    }
+
+    .hero{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:50px;
+      padding:70px 8%;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:300px;
+      animation:fadeIn 1s ease;
+    }
+
+    .hero-text h2{
+      font-size:3rem;
+      color:#222;
+      margin-bottom:20px;
+      line-height:1.2;
+    }
+
+    .hero-text span{
+      color:#6c63ff;
+    }
+
+    .hero-text p{
+      line-height:1.8;
+      color:#666;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:14px 28px;
+      background:#6c63ff;
+      color:white;
+      text-decoration:none;
+      border-radius:30px;
+      transition:0.3s;
+      font-weight:600;
+    }
+
+    .btn:hover{
+      background:#574bdb;
+      transform:translateY(-3px);
+    }
+
+    .hero-image{
+      flex:1;
+      min-width:300px;
+      text-align:center;
+      animation:float 3s ease-in-out infinite;
+    }
+
+    .hero-image img{
+      width:100%;
+      max-width:420px;
+      border-radius:20px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .about{
+      background:white;
+      margin:40px auto;
+      max-width:1000px;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      text-align:center;
+    }
+
+    .about h3{
+      font-size:2rem;
+      margin-bottom:15px;
+      color:#6c63ff;
+    }
+
+    .about p{
+      line-height:1.8;
+      color:#666;
+    }
+
+    footer{
+      margin-top:50px;
+      background:#222;
+      color:white;
+      text-align:center;
+      padding:20px;
+    }
+
+    body.dark{
+      background:#121212;
+      color:white;
+    }
+
+    body.dark nav{
+      background:#1f1f1f;
+    }
+
+    body.dark .hero-text h2{
+      color:white;
+    }
+
+    body.dark .hero-text p{
+      color:#ddd;
+    }
+
+    body.dark .about{
+      background:#1e1e2f;
+    }
+
+    body.dark .about p{
+      color:#ddd;
+    }
+
+    body.dark footer{
+      background:black;
+    }
+
+    @keyframes float{
+      0%{
+        transform:translateY(0px);
+      }
+
+      50%{
+        transform:translateY(-10px);
+      }
+
+      100%{
+        transform:translateY(0px);
+      }
+    }
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @media(max-width:768px){
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .hero-text h2{
+        font-size:2.2rem;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <nav>
+
+    <h1>She Can Foundation</h1>
+
+    <button class="dark-btn" onclick="toggleTheme()">
+      🌙 Dark Mode
+    </button>
+
+  </nav>
+
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <h2>
+        Empowering <span>Women</span><br>
+        Inspiring Change
+      </h2>
+
+      <p>
+        She Can Foundation supports women through education,
+        awareness, leadership programs, and community initiatives
+        to build confidence and create equal opportunities.
+      </p>
+
+      <a href="#" class="btn">
+        Join Our Mission
+      </a>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img src="shecan.png" alt="Women Empowerment">
+
+    </div>
+
+  </section>
+
+  <section class="about">
+
+    <h3>About Us</h3>
+
+    <p>
+      Our mission is to create a supportive environment where women
+      and young girls can grow, lead, and achieve their goals through
+      empowerment programs and social impact initiatives.
+    </p>
+
+  </section>
+
+  <footer>
+
+    <p>© 2026 She Can Foundation | All Rights Reserved</p>
+
+  </footer>
+
+  <script>
+
+    function toggleTheme(){
+      document.body.classList.toggle("dark");
+    }
+
+  </script>
+
+</body>
+</html>
+
